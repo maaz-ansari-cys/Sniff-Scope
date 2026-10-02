@@ -1,43 +1,76 @@
+# SniffScope
 
-# 🔎 SniffScope
+**Educational Network & DNS Traffic Viewer for Windows**
 
-### Educational Network & DNS Traffic Viewer for Windows
-
-**SniffScope** is a Windows desktop application designed for **educational network discovery and traffic analysis in authorized laboratory environments**.
+SniffScope is a Windows desktop application designed for **educational network discovery and traffic analysis in authorized laboratory environments**.
 
 It provides a graphical interface for discovering devices on a local network, viewing network information, analyzing DNS activity, and inspecting captured traffic during authorized security testing.
 
-> ⚠️ **Authorized Use Only**
+> **⚠ Authorized Use Only**
 >
 > SniffScope is intended for networks, systems, and devices that you own or have explicit permission to test.
 >
 > Do **not** use the software for unauthorized interception, surveillance, credential collection, traffic manipulation, or disruption of networks.
 >
-> You are responsible for complying with applicable laws, organizational policies, and network-usage rules.
+> You are responsible for complying with applicable laws, regulations, and network policies.
 
 ---
 
-## ✨ Features
+## ◆ Download
+
+The SniffScope installer is distributed through **GitHub Releases** rather than being stored directly in the repository.
+
+**→ [Download the latest SniffScope Release](../../releases/latest)**
+
+From the latest release, download:
+
+```text
+SniffScope-Setup.exe
+```
+
+For detailed installation and usage instructions:
+
+**→ [Sniff Scope Installation Guide](./Sniff%20Scope%20Installation%20Guide.pdf)**
+
+### Repository Contents
+
+```text
+Sniff-Scope/
+│
+├── README.md
+├── Sniff Scope Installation Guide.pdf
+│
+└── Releases
+    └── SniffScope-Setup.exe
+```
+
+> **Why isn't the `.exe` visible in the repository?**
+>
+> The installer is distributed through GitHub Releases instead of being stored as a regular repository file. Open the **Releases** section above to download the latest Windows installer.
+
+---
+
+## ◆ Features
 
 SniffScope provides an educational environment for studying:
 
-* 🌐 Local network device discovery
-* 📡 ARP-based network scanning
-* 💻 Device IP and MAC address identification
-* 🏷️ Hardware/vendor identification
-* 🔎 DNS traffic and domain-resolution analysis
-* 📊 Network device status monitoring
-* 🧪 Authorized traffic interception for laboratory testing
-* 📋 Target host analysis
-* 🌍 Domain/DNS resolution visibility
-* 📦 Application and HTTP payload inspection where technically available
-* 📁 CSV export of collected scan results
+* Local network device discovery
+* ARP-based network scanning
+* IP and MAC address identification
+* Hardware/vendor identification
+* DNS traffic and domain-resolution analysis
+* Network device status monitoring
+* Authorized traffic interception for laboratory testing
+* Target host analysis
+* DNS resolution visibility
+* Application and HTTP payload inspection where technically available
+* CSV export of scan results
 
 ---
 
-# 📋 Prerequisites
+# ◆ Prerequisites
 
-Before installing SniffScope, make sure your Windows system meets the following requirements.
+Before installing SniffScope, ensure that the following requirements are available.
 
 ### Required
 
@@ -45,13 +78,13 @@ Before installing SniffScope, make sure your Windows system meets the following 
 * Administrator privileges when required by the installer
 * **Npcap**
 
-SniffScope requires Npcap for packet capture and network traffic analysis.
+SniffScope uses Npcap for packet capture and network traffic analysis.
 
 ### Npcap
 
-Download Npcap from its official website:
+Download Npcap from the official source:
 
-[Npcap Official Website](https://npcap.com/?utm_source=chatgpt.com)
+**→ [Npcap Official Website](https://npcap.com/)**
 
 The installer may have a versioned filename such as:
 
@@ -59,29 +92,29 @@ The installer may have a versioned filename such as:
 npcap-1.89.exe
 ```
 
-The exact filename may change as newer Npcap releases become available.
+The exact filename may change with newer Npcap releases.
 
 ---
 
-# 🚀 Installation
+# ◆ Installation
 
-## Step 1 — Download SniffScope
+## 1. Download SniffScope
 
-Download the latest:
+Open the:
+
+**→ [Latest SniffScope Release](../../releases/latest)**
+
+Download:
 
 ```text
 SniffScope-Setup.exe
 ```
 
-from the **GitHub Releases** section of this repository.
-
-> Windows may display a security warning because the installer may not have a widely recognized code-signing reputation.
-
-If Windows shows a warning, verify that you downloaded the installer from the intended official repository/release before proceeding.
+> Windows may display a security warning because the installer may not have an established code-signing reputation. Make sure the installer was downloaded from the intended SniffScope GitHub Release before proceeding.
 
 ---
 
-## Step 2 — Start the Installer
+## 2. Start the Installer
 
 Run:
 
@@ -93,7 +126,7 @@ Follow the installation wizard.
 
 ---
 
-## Step 3 — Select Installation User
+## 3. Select Installation User
 
 When prompted, select the appropriate installation option/user and click:
 
@@ -101,43 +134,43 @@ When prompted, select the appropriate installation option/user and click:
 
 ---
 
-## Step 4 — Select Installation Directory
+## 4. Select Installation Directory
 
-Choose where SniffScope should be installed.
+Choose the directory where SniffScope should be installed.
 
-You can either:
+You can:
 
-* Keep the default installation directory, or
-* Select a custom directory.
+* Keep the default directory, or
+* Select a custom installation directory.
 
-Then click:
+Click:
 
 **Next**
 
 ---
 
-## Step 5 — Install Npcap
+## 5. Install Npcap
 
-During installation, SniffScope may detect that Npcap is not installed.
+SniffScope may detect that Npcap is not installed.
 
 If prompted:
 
-1. Visit the official Npcap website.
-2. Download the **Windows installer**.
-3. Right-click the Npcap installer.
+1. Open the official Npcap website.
+2. Download the Windows installer.
+3. Right-click the installer.
 4. Select **Run as administrator**.
 5. Complete the Npcap installation.
-6. Restart Windows if Npcap requests it.
+6. Restart Windows if requested.
 
-After Npcap has been installed, return to the SniffScope installer and click:
+Return to the SniffScope installer and select:
 
 **Retry**
 
 ---
 
-## Step 6 — Finish Installation
+## 6. Finish Installation
 
-Once all prerequisites have been detected successfully, complete the SniffScope installation.
+Once all required components have been detected, complete the installation.
 
 Click:
 
@@ -147,13 +180,13 @@ SniffScope is now installed.
 
 ---
 
-# 🔐 First-Time Setup
+# ◆ First-Time Setup
 
-After launching SniffScope, open:
+Launch SniffScope and open:
 
-### Access Command Center
+**Access Command Center**
 
-You will be asked to configure your local SniffScope access credentials.
+The first launch requires local application credentials.
 
 ### 1. Choose Your Name
 
@@ -165,7 +198,7 @@ Create the required 8-character password.
 
 ### 3. Initialize System Administrator
 
-Click:
+Select:
 
 **Initialize System Administrator**
 
@@ -175,175 +208,174 @@ Wait while the application loads the required network information and credential
 
 ---
 
-# 🌐 Network Discovery
+# ◆ Network Discovery
 
-Once initialization is complete, you can begin discovering devices on the local network.
+After initialization, SniffScope can be used to discover devices visible on the local network.
 
-## Step 1 — Trigger ARP Scan
+## Trigger ARP Scan
 
-Click:
+Select:
 
 **Trigger ARP Scan**
 
-SniffScope will perform an ARP-based discovery process to identify devices visible on the local network.
+SniffScope performs an ARP-based discovery process.
 
 Depending on the network configuration, discovered information may include:
 
 | Information | Description                                |
 | ----------- | ------------------------------------------ |
 | IP Address  | Network address assigned to the device     |
-| MAC Address | Hardware/network interface address         |
+| MAC Address | Network interface hardware address         |
 | Vendor      | Manufacturer information when identifiable |
 | Status      | Current discovery/status information       |
 
----
+### Discovery Process
 
-## Step 2 — Wait for Discovery
+```text
+ARP Scan
+   │
+   ├── Discover devices
+   ├── Identify IP addresses
+   ├── Identify MAC addresses
+   └── Determine vendor information
+```
 
-SniffScope will begin scanning the network.
-
-The application will populate the device list as devices are discovered.
-
-You can use this information to study:
-
-* Local network topology
-* Connected devices
-* IP addressing
-* MAC addresses
-* Hardware vendors
-* Device visibility on the network
+The device list will populate as hosts are discovered.
 
 ---
 
-# 📊 Network Status
+# ◆ Network Status
 
-After the scan completes, the discovered devices will be displayed in the SniffScope interface.
+After scanning, SniffScope displays the discovered devices in the network interface.
 
-The device list provides an overview of hosts detected during the scan.
-
-This can be useful for educational exercises involving:
+This information can be used for educational exercises involving:
 
 * Network inventory
 * Network discovery
 * Asset identification
-* Basic network analysis
+* IP/MAC analysis
+* Basic network monitoring
 
 ---
 
-# 🧪 Authorized Traffic Interception
+# ◆ Authorized Traffic Interception
 
-> ⚠️ **IMPORTANT**
+> **⚠ Authorization Required**
 >
-> Only perform interception or traffic-analysis activities against systems where you have explicit authorization.
+> Only perform traffic interception against systems and networks where you have explicit authorization.
 >
-> For example, use a controlled laboratory environment containing your own virtual machines or devices.
+> A controlled laboratory containing your own virtual machines is recommended for testing.
 
 To begin an authorized interception session:
 
-1. Select the target device from the discovered-device list.
+1. Select a device from the discovered-device list.
 
 2. Review the target information.
 
-3. Click:
+3. Select:
 
    **Begin MITM (Man-in-the-Middle) Interception**
 
-4. Follow any permission or authorization prompts shown by the application.
+4. Follow any permission or authorization prompts displayed by the application.
 
-SniffScope will then begin the configured traffic-analysis process.
+SniffScope will begin the configured traffic-analysis process.
 
 ---
 
-# 🔎 DNS & Traffic Analysis
+# ◆ DNS & Traffic Analysis
 
-During an authorized analysis session, SniffScope can display network information associated with observed traffic.
+During an authorized analysis session, SniffScope can display information associated with observed network traffic.
 
-The interface may show:
+Depending on the captured traffic, this may include:
 
-* Source/target IP addresses
+* Source and destination IP addresses
 * Domain information
 * DNS resolutions
 * Target host information
-* Application-related traffic information
+* Application-related traffic
 * HTTP payload information where applicable
 
-The purpose of this functionality is to provide a practical environment for learning how network traffic and DNS activity can appear during security analysis.
+The purpose is to provide a practical environment for understanding how network and DNS activity appears during security analysis.
 
 ---
 
-# 🌍 DNS Resolution Analysis
+# ◆ DNS Resolution Analysis
 
-One of SniffScope's main educational features is examining DNS activity.
+SniffScope can help associate observed network activity with domain names and DNS resolutions.
 
-The application can help associate observed network activity with domain names and DNS resolutions.
-
-For example, during an authorized lab session, you may observe:
+A simplified example:
 
 ```text
 Device
-   ↓
+   │
+   ▼
 DNS Query
-   ↓
+   │
+   ▼
 example.com
-   ↓
+   │
+   ▼
 Resolved IP Address
-   ↓
+   │
+   ▼
 Network Connection
 ```
 
 This allows students to study the relationship between:
 
-**Device → DNS Query → Domain → IP Address → Network Traffic**
+```text
+Device → DNS Query → Domain → IP Address → Network Traffic
+```
 
 ---
 
-# 📦 Application & HTTP Payload Analysis
+# ◆ Application & HTTP Payload Analysis
 
-Where supported by the captured traffic and protocol conditions, SniffScope provides application-level traffic information.
+Where supported by the captured traffic and protocol conditions, SniffScope can provide application-level traffic information.
 
-You may also encounter:
+HTTP payload information may also be available when the captured traffic is actually using HTTP and the relevant data is visible.
 
-**HTTP Payload Data**
-
-This can be useful when studying how application-layer traffic appears during controlled network-security experiments.
-
-> **Important:** Encrypted protocols such as HTTPS generally prevent the application from simply displaying the contents of encrypted traffic. Visibility depends on the protocol, encryption, capture conditions, and the specific traffic being analyzed.
+> **Note:** HTTPS encrypts application traffic. SniffScope cannot simply display encrypted HTTPS contents. Visibility depends on the protocol, encryption, capture conditions, and traffic available to the application.
 
 ---
 
-# 📥 Export Scan Results
+# ◆ Export Scan Results
 
-After completing a network scan, SniffScope provides an option to export the collected results.
+After a network scan, SniffScope provides an option to export collected results.
 
-Click:
+Select:
 
 **Download CSV**
 
 The exported CSV can be used for:
 
-* Documentation
 * Lab reports
 * Network inventory
+* Documentation
 * Further analysis
 * Record keeping
 
-Example workflow:
+### Workflow
 
 ```text
 ARP Scan
-   ↓
+   │
+   ▼
 Device Discovery
-   ↓
+   │
+   ▼
 Review Results
-   ↓
+   │
+   ▼
 Export CSV
-   ↓
+   │
+   ▼
 Analyze / Document
 ```
 
 ---
 
-#  Targeted Host Analysis
+# ◆ Targeted Host Analysis
 
 After selecting a target during an authorized analysis session, SniffScope can provide additional information related to that host.
 
@@ -351,91 +383,85 @@ Depending on the available traffic, this may include:
 
 * Target IP address
 * DNS resolutions
-* Domains observed
+* Observed domains
 * Application traffic
 * HTTP information
 * Network activity
 
-This section is intended for studying how a particular host communicates across a network during a controlled laboratory exercise.
+This functionality is intended for controlled network-security experiments.
 
 ---
 
-# ⚠️ Permissions & Authorization
+# ◆ Permissions & Authorization
 
-During operation, SniffScope may display permission or authorization-related prompts.
+SniffScope may display permission or authorization prompts during operation.
 
-Always verify that you have permission before proceeding.
+Always verify that you have permission before continuing with scanning or interception activities.
 
-### Recommended Lab Environment
+### Recommended Lab
 
-For learning and testing, use an isolated environment such as:
+A controlled virtual environment can be used for testing:
 
 ```text
-┌──────────────────────┐
-│   Your Test Network  │
-└──────────┬───────────┘
-           │
-     ┌─────┴─────┐
-     │            │
-┌────▼────┐  ┌────▼────┐
-│ Windows │  │  Linux  │
-│ Victim  │  │  Tester │
-└─────────┘  └─────────┘
+             Isolated Lab Network
+                     │
+          ┌──────────┼──────────┐
+          │          │          │
+       Windows     Linux     SniffScope
+       Test VM    Test VM       Host
 ```
 
-Virtual machines are particularly useful because they allow you to create a controlled environment without affecting unrelated devices.
+Virtual machines allow network-security experiments to be performed without intentionally affecting unrelated systems.
 
 ---
 
-# 🆓 Trial Usage
+# ◆ Trial Usage
 
 SniffScope provides:
 
-### **3 Free Attempts**
+**3 free attempts**
 
-The application provides **3 free tries for scanning and MITM interception functionality**.
+These attempts cover the application's scanning and MITM interception functionality.
 
-After the available free attempts have been used, additional usage requires credits/license activation.
+After the available free attempts are used, additional usage requires credits/license activation.
 
 ---
 
-# 🔑 Licensing & Credits
+# ◆ Licensing & Credits
 
 To request additional usage credits:
 
-### Step 1 — Copy Your Machine ID
+### 1. Copy Your Machine ID
 
-Open the relevant licensing/access section of SniffScope and copy your:
+Open the relevant licensing/access section in SniffScope and copy your:
 
 ```text
 Machine ID
 ```
 
-### Step 2 — Contact the Developer
+### 2. Contact the Developer
 
-Visit:
+**→ [SniffScope Licensing / Contact](https://maazansari.vercel.app/contact)**
 
-[SniffScope Licensing / Contact](https://maazansari.vercel.app/contact?utm_source=chatgpt.com)
+Use a valid email address and include your Machine ID in the request.
 
-Use a valid email address and include your Machine ID when requesting a license.
+### 3. Request Credits
 
-### Step 3 — Request Credits
-
-Once the request is processed, eligible users can receive:
+Eligible users can request:
 
 **$100 worth of free scanning and MITM interception credits**
 
-> Credit availability and licensing terms may be subject to change.
+> Credit availability and licensing terms may change.
 
 ---
 
-# 🛠️ Troubleshooting
+# ◆ Troubleshooting
 
-## SniffScope asks me to install Npcap
+## Npcap is required
 
 Install Npcap from:
 
-[Npcap Official Website](https://npcap.com/?utm_source=chatgpt.com)
+**→ [Npcap Official Website](https://npcap.com/)**
 
 Run the installer as administrator and restart Windows if requested.
 
@@ -447,13 +473,15 @@ Then return to SniffScope and select:
 
 ## Npcap is installed but SniffScope does not detect it
 
-Try the following:
+Try:
 
-1. Close SniffScope.
-2. Confirm Npcap is installed.
-3. Restart Windows.
-4. Launch SniffScope again.
-5. Run SniffScope with the required Windows permissions.
+```text
+1. Close SniffScope
+2. Confirm Npcap is installed
+3. Restart Windows
+4. Launch SniffScope
+5. Provide required Windows permissions
+```
 
 ---
 
@@ -461,72 +489,79 @@ Try the following:
 
 Possible causes include:
 
-* The device is not on the same local network.
+* The target is not on the same local network.
 * Network isolation is enabled.
-* The network blocks or restricts ARP-based discovery.
-* The interface selected by the system is not the expected network adapter.
+* The network restricts ARP-based discovery.
+* The wrong network interface is being used.
 * Windows permissions or packet-capture configuration are incomplete.
 
-Test first in a controlled LAN/lab environment.
+Testing on a controlled LAN or virtual lab is recommended.
 
 ---
 
 ## DNS information is not appearing
 
-DNS visibility depends on how the target system and network handle DNS.
+DNS visibility depends on the network and the way the target performs DNS resolution.
 
 Possible reasons include:
 
-* Encrypted DNS
 * DNS caching
-* DNS-over-HTTPS / DNS-over-TLS
+* Encrypted DNS
+* DNS-over-HTTPS
+* DNS-over-TLS
 * Traffic occurring outside the captured interface
 * Insufficient capture permissions
 
-Therefore, absence of a DNS entry does not necessarily mean that the device did not access a domain.
+Therefore, the absence of a DNS entry does not necessarily mean that a domain was not accessed.
 
 ---
 
-# 🧪 Recommended Educational Lab
+# ◆ Recommended Educational Lab
 
-For cybersecurity students, SniffScope can be tested safely using an isolated virtual network.
+SniffScope can be tested using an isolated virtual network.
 
-A simple setup could contain:
+A simple setup:
 
 ```text
-              Isolated Lab Network
-                     │
-        ┌────────────┼────────────┐
-        │            │            │
-   Windows VM    Linux VM    SniffScope
-    Test Host    Test Host     Machine
+                  Isolated Network
+                         │
+             ┌───────────┼───────────┐
+             │           │           │
+        Windows VM    Linux VM    SniffScope
+        Test Host    Test Host      Machine
 ```
 
-Use only systems that you control or have explicit authorization to monitor.
+Use only systems that you own or have explicit authorization to monitor.
 
-This provides a practical environment for studying:
+The environment can be used to study:
 
-* ARP
-* MAC addresses
-* IP addressing
-* DNS
-* Network discovery
-* Packet capture
-* Traffic analysis
-* HTTP
-* Network monitoring
-* Security testing concepts
+```text
+ARP
+ ├─ MAC Addresses
+ ├─ IP Addresses
+ └─ Device Discovery
+
+DNS
+ ├─ Queries
+ ├─ Domains
+ └─ Resolutions
+
+Traffic
+ ├─ Packet Capture
+ ├─ Application Traffic
+ └─ HTTP Analysis
+```
 
 ---
 
-# 🛡️ Responsible Use
+# ◆ Responsible Use
 
 SniffScope is an educational security tool.
 
-It should **not** be used to:
+It must not be used to:
 
 * Intercept networks without authorization
-* Monitor other people's devices without permission
+* Monitor devices without permission
 * Collect credentials
 * Capture private communications
 * Disrupt network availability
@@ -539,21 +574,21 @@ The developer does not authorize misuse of the software.
 
 ---
 
-# 📄 Disclaimer
+# ◆ Disclaimer
 
 SniffScope is provided for educational and authorized security-testing purposes.
 
-The software is provided **without warranty**. Users are solely responsible for ensuring that their use of SniffScope complies with applicable laws, regulations, organizational policies, and network-owner requirements.
+The software is provided **without warranty**. Users are responsible for ensuring that their use of SniffScope complies with applicable laws, regulations, organizational policies, and network-owner requirements.
 
 The developer assumes no responsibility for unauthorized or unlawful use of the software.
 
 ---
 
-# 📜 Copyright
+# ◆ Copyright
 
 Copyright © 2026 **Maaz Ansari**
 
-This copyright notice covers SniffScope's original code and assets distributed with:
+This notice covers SniffScope's original code and assets distributed with:
 
 ```text
 SniffScope-Setup.exe
@@ -563,60 +598,71 @@ Bundled third-party components, including Npcap, remain subject to their respect
 
 ---
 
-# 👨‍💻 Developer
+# ◆ Developer
 
 **Maaz Ansari**
 
 Cybersecurity Student | Security Research & Development
 
-🌐 Portfolio:
+**Portfolio:**
+https://maazansari.vercel.app
 
-[maazansari.vercel.app](https://maazansari.vercel.app?utm_source=chatgpt.com)
-
-📩 Licensing & Contact:
-
-[Contact / Licensing](https://maazansari.vercel.app/contact?utm_source=chatgpt.com)
+**Licensing / Contact:**
+https://maazansari.vercel.app/contact
 
 ---
 
-## 📌 Quick Start
+## ◆ Quick Start
 
-For experienced users, the complete workflow is:
+For experienced users:
 
 ```text
-1. Download SniffScope
-        ↓
-2. Install SniffScope
-        ↓
-3. Install Npcap if required
-        ↓
-4. Restart Windows if requested
-        ↓
+1. Open GitHub Releases
+        │
+        ▼
+2. Download SniffScope-Setup.exe
+        │
+        ▼
+3. Install SniffScope
+        │
+        ▼
+4. Install Npcap if required
+        │
+        ▼
 5. Launch SniffScope
-        ↓
+        │
+        ▼
 6. Access Command Center
-        ↓
+        │
+        ▼
 7. Create local credentials
-        ↓
+        │
+        ▼
 8. Initialize System Administrator
-        ↓
+        │
+        ▼
 9. Trigger ARP Scan
-        ↓
+        │
+        ▼
 10. Review discovered devices
-        ↓
+        │
+        ▼
 11. Select an authorized test device
-        ↓
+        │
+        ▼
 12. Begin authorized traffic interception
-        ↓
+        │
+        ▼
 13. Analyze DNS / traffic information
-        ↓
+        │
+        ▼
 14. Export results to CSV
 ```
 
 ---
 
-### ⚠️ Final Reminder
-
-**Only scan, monitor, or intercept devices and networks that you own or have explicit authorization to test.**
-
-Use SniffScope as a learning tool to understand how network discovery, DNS activity, and traffic analysis work in controlled cybersecurity environments.
+> **⚠ Final Reminder**
+>
+> Only scan, monitor, or intercept devices and networks that you own or have explicit authorization to test.
+>
+> SniffScope is intended as a learning tool for understanding network discovery, DNS activity, packet capture, and traffic analysis in controlled cybersecurity environments.
