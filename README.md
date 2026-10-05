@@ -110,7 +110,7 @@ Download:
 SniffScope-Setup.exe
 ```
 
-> Windows may display a security warning because the installer may not have an established code-signing reputation. Make sure the installer was downloaded from the intended SniffScope GitHub Release before proceeding.
+> Windows may display a security warning because the installer may not have an established code-signing reputation. Make sure the installer was downloaded from the intended SniffScope GitHub Release.
 
 ---
 
@@ -279,6 +279,57 @@ To begin an authorized interception session:
 4. Follow any permission or authorization prompts displayed by the application.
 
 SniffScope will begin the configured traffic-analysis process.
+
+---
+
+# ◆ Network Limitations & Enterprise Firewalls
+
+SniffScope's MITM interception functionality has **important limitations in enterprise and organizational networks**.
+
+### Enterprise Firewall Restrictions
+
+Organizations implementing **ISO 27001, ISO 27002, and privacy compliance standards** typically deploy advanced firewall configurations and network security controls that prevent Man-in-the-Middle attacks:
+
+#### Restrictions That Block MITM:
+
+* **Next-Generation Firewalls (NGFW)** — inspect and block ARP spoofing attempts
+* **Dynamic ARP Inspection (DAI)** — prevents ARP-based MITM attacks
+* **DHCP Snooping** — validates ARP packets against DHCP bindings
+* **Network Access Control (NAC)** — monitors and restricts unauthorized device activity
+* **Encrypted DNS (DoH/DoT)** — prevents DNS interception and analysis
+* **TLS/SSL Inspection** — decrypts and re-encrypts traffic (blocks passive capture)
+* **Port Security & MAC Filtering** — restricts ARP on protected ports
+* **Intrusion Detection/Prevention (IDS/IPS)** — detects MITM signatures
+* **VPN Requirements** — forces encrypted tunnels that bypass local interception
+* **Endpoint Detection & Response (EDR)** — detects SniffScope packet capture and MITM processes
+
+### When MITM Will Not Work:
+
+✗ Large organizations with enterprise security policies  
+✗ Corporate networks with compliance requirements (ISO standards)  
+✗ Networks with stateful firewall inspection  
+✗ Networks requiring VPN access  
+✗ Educational institutions with robust network security  
+✗ Any network restricting unauthorized ARP or DNS activity  
+
+### When MITM May Work:
+
+✓ Small isolated lab networks (Virtual machines)  
+✓ Home networks without advanced firewalls  
+✓ Networks you own with no security controls  
+✓ Authorized penetration testing environments  
+✓ Controlled lab environments with explicit permission  
+
+### Recommendation
+
+**SniffScope MITM functionality is designed for isolated laboratory testing only.**
+
+For enterprise network analysis, organizations should:
+
+* Use authorized network monitoring tools approved by IT/Security teams
+* Work with network administrators within compliance frameworks
+* Conduct authorized security testing through formal channels
+* Respect organizational security policies and privacy standards
 
 ---
 
@@ -513,6 +564,21 @@ Possible reasons include:
 * Insufficient capture permissions
 
 Therefore, the absence of a DNS entry does not necessarily mean that a domain was not accessed.
+
+---
+
+## MITM Interception is not working
+
+See the **Network Limitations & Enterprise Firewalls** section for details about firewall restrictions that may prevent MITM functionality.
+
+If you are testing in an enterprise or organizational network, MITM interception may be blocked by:
+
+* Firewall policies
+* ARP inspection
+* Network access controls
+* Compliance-related security measures
+
+For MITM testing, use isolated laboratory networks (virtual machines) where you have full control.
 
 ---
 
